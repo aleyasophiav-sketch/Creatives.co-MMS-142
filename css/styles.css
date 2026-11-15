@@ -1,1 +1,85 @@
+/* fonts */
+.sigmar-one-regular {
+  font-family: "Sigmar One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.overpass {
+  font-family: "Overpass", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* color */
+:root {
+  --primary: #5B6AB2;
+  --secondary: #BCB5F9;
+  --accent: #FEEA4C;
+  --text: #1F2227;
+  --background: #FCFDF9;
+}
+
+/* home page */
+body {
+  background-color: var(--background);
+}
+
+#navigation, #footer, #footer a, #footer p {
+	color: white;
+	font-family: overpass;
+	background-color: var(--primary);
+	text-decoration: none;
+}
+
+
+h1, h3 {
+	color: var(--text);
+	font-family: sigmar one;
+}
+
+h2 {
+	font-size: 20px;
+	color: var(--text);
+	font-family: overpass;
+}
+
+p {
+	color: var(--text);
+	font-family: overpass;
+}
+
+#banner {
+  background-image: 
+    linear-gradient(#5B6AB299, #FCFDF9),
+    url(header-bg.png);
+    
+  background-size: cover;
+  background-position: top;
+  height: 250px;
+}
+
+
+#shop-now {
+	font-family: overpass;
+	color: var(--text);
+	background-color: var(--accent);
+}
+
+#shirts .card {
+	background-color: var(--background);
+	color: var(--text);
+	font-family: overpass;
+}
+
+#shirts i {
+	font-size: 30px;
+	color: var(--text);
+}
+
+
+#abt-us {
+	background-color: var(--secondary);
+}
+
 
