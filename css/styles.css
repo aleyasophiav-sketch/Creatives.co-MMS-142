@@ -81,3 +81,7 @@ p {
 #abt-us {
 	background-color: var(--secondary);
 }
+
+#tos-header {
+	text-align: center;
+}
