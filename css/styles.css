@@ -83,3 +83,8 @@ p {
 }
 
 
+/* terms of service page */
+#tos-header {
+	text-align: center;
+	marghin-bottom: 20px;
+}
