@@ -274,3 +274,16 @@ display: block;
     border: 5px solid var(--primary);
     border-radius: 30px;
 }
+
+/* privacy policy page */
+#privacy-page {
+    background-color: var(--secondary);
+    padding: 40px;
+}
+
+#privacy-border {
+    background-color: var(--background);
+    padding: 50px 60px 80px;
+    border: 5px solid var(--primary);
+    border-radius: 30px;
+}
