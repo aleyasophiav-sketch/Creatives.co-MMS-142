@@ -286,3 +286,21 @@ display: block;
     border: 5px solid var(--primary);
     border-radius: 30px;
 }
+
+.privacy-policy {
+	color: #1F2227;
+}
+
+.privacy-policy h1 {
+	color: #1F2227;
+}
+
+.privacy-policy h2 {
+	font-family: "Sigmar One";
+	font-size: revert;
+}
+
+.privacy-policy h3 {
+	font-family: "Overpass"; 
+	font-size: revert;
+}
