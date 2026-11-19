@@ -7,7 +7,7 @@
 
     <!--Bootstrap and CSS-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,7 @@
 
 <body class="d-flex flex-column min-vh-100">
     <!--Navigation Bar-->
-    <nav id= "navigation" class="navbar md:navbar-expand border bottom">
+    <nav id= "navigation" class="navbar md:navbar-expand">
   <div class="container-fluid">
     <a href="index.html" class="logo-link" aria-label="Go to home page">
 	<img src="images/logo.png" alt="Comfort.co" width="60" height="60" class= "ms-9 me-8">
@@ -45,46 +45,86 @@
 </nav>
 
 <!-- Product Display and Info -->
-<main class="container py-12">
-<div class="row g-6 mb-12">
+<main id="product-display" class="container py-12">
+<div class="row g-6 mb-12 justify-content-center align-items-stretch">
 
         <!--Product Image-->
-        <div class="md:col-6"> 
-            <div class="card">
-                <div class="card-body shadow rounded">
-            <img src="images/everyday-comfort-tee.png" alt="Comfort.co Everyday Comfort Tee" class="img-fluid rounded shadow-sm w-100 d-block object-fit-cover">
-        </div>
+        <div id="product-image" class="col-12 lg:col-5 d-flex"> 
+            <div class="card border-2 shadow rounded overflow-hidden h-100 w-100">
+                <div class="card-body p-0 h-100">
+            <img src="everyday-comfort-tee.png" alt="Comfort.co Everyday Comfort Tee" class="img-fluid rounded shadow-sm w-100 d-block object-fit-cover">
+                </div>
             </div>
-</div>
+        </div>
 
-<!--Product Info-->
-<section id="product-info">
-<div class="md:col-6">
-    <div class="card">
-        <div class="card-body rounded">
+<!--Product Info + Form-->
+<div id="product-info" class="col-12 lg:col-6">
+
+    <div class="card border-2 rounded">
+        <div class="card-body">
     <h1>Everyday Comfort Tee</h1>
     <h2> ₱ 499 </h2>
     <br>
     <p>The Everyday Comfort Tee is the perfect daily wear tee for you! 
-Made from high-quality materials, this simple plain tee sure is fit for style and comfort.</p>
+    Made from high-quality materials, this simple plain tee sure is fit for style and comfort.</p>
         </div>
     </div>
+
+<br>
+<!--Order Form-->
+<div id="order-form" class="card border-2 rounded">
+    <div class="card-body">
+        <h3>Order Details</h3>
+
+<form id="order-details" class="order-details" action="#" method="post">
+    <!--Shirt Details-->
+    <div class="input-group mb-3">
+        <label for="size" class="form-label"> Size <span class="required">(required)</span></label>
+        <select id="size" name="size" class="form-control" aria-describedby="chooseSize" required>
+            <option value="">Choose a Size</option>
+            <option value="XS">Extra Small (XS)</option>
+            <option value="S">Small (S)</option>
+            <option value="M">Medium (M)</option>
+            <option value="L">Large (L)</option>
+            <option value="XL">Extra Large (XL)</option>
+        </select>
+    </div>
+
+    <div class="input-group mb-3">
+        <label for="quantity" class="form-label"> Quantity <span class="required">(required)</span></label>
+        <input type="number" id="quantity" name="quantity" class="form-control" min="1" aria-describedby="shirtQuantity" required>
+    </div>
+
+<br>
+    <h3>Customer Details</h3>
+    <div class="input-group mb-3">
+        <label for="full-name" class="form-label"> Full Name <span class="required">(required)</span></label>
+        <input type="text" id="full-name" name="full-name" class="form-control" required autocomplete="name" aria-describedby="yourFullName">
+    </div>
+
+    <div class="input-group mb-3">
+        <label for="email" class="form-label"> Email Address <span class="required">(required)</span></label>
+        <input type="text" class="form-control" name="email" id="email" aria-describedby="yourEmailAddress" autocomplete="email">
+    </div>
+
+    <div class="input-group mb-4">
+        <label for="street-address" class="form-label"> Address <span class="required">(required)</span></label>
+        <input type="text" class="form-control" name="street-address" id="street-address" aria-describedby="yourAddress" autocomplete="street-address">
+    </div>
+
+    <button type="submit" class="btn-solid theme-primary w-100 fw-bold">Order Now</button>
+
+</form>
+    </div>
 </div>
-</section>
 
-
+</div>
 </div>
 </main>
 
 
-
-
-
-
-
-
 <!-- Footer -->
-<footer id="footer" class="py-3 mt-autos">
+<footer id="footer" class="py-3 mt-auto">
    <div class="container">
       <div class="row">
          <div class="md:col-6 md:text-start text-center">
