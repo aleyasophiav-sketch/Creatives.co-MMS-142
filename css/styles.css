@@ -147,29 +147,27 @@ p {
   border-radius: 16px;
 }
 
-.product-img-wrapper {
+.product-main {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 100%;
+  padding: 0 0 70px 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
-  padding-top: 20px;
 }
 
-#product-image .product-img-wrapper > img {
+#product-main .shirt-img{
 width: 100%;
 height: 100%;
 object-fit: contain;
-object-position: center;
 display: block;
 }
 
 .color-var-logo {
 position: absolute;
-bottom: 5px;
-left: 15px;
+bottom: 0px;
+left: 0px;
 z-index: 2;
 }
 
