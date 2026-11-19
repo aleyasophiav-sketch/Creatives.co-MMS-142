@@ -58,7 +58,7 @@ p {
 #banner {
   background-image: 
     linear-gradient(#5B6AB299, #FCFDF9),
-    url(images/header-bg.png);
+    url(../images/header-bg.png);
     
   background-size: cover;
   background-position: top;
@@ -83,6 +83,43 @@ p {
 	color: var(--text);
 }
 
+#prod-page1 i, #prod-page2 i, #prod-page3 i   {
+	font-size: 40px;
+	color: var(--text);
+}
+
+#prod-1 {
+  background-image: 
+    linear-gradient(#FFFFFF00 70%, #00000066 100%),
+    url(../images/dont-bee-late-tee.png);	
+	
+	background-size: 100%, contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+#prod-2 {
+  background-image: 
+    linear-gradient(#FFFFFF00 70%, #00000066 100%),
+    url(../images/everyday-comfort-tee.png);	
+	
+	background-size: 100%, contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 300px;
+}
+
+#prod-3 {
+  background-image: 
+    linear-gradient(#FFFFFF00 70%, #00000066 100%),
+    url(../images/do-good-work-tee.png);	
+	
+	background-size: 100%, contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	height: 300px;
+}
 
 #abt-us {
 	background-color: var(--secondary);
