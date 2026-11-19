@@ -82,6 +82,11 @@ p {
 	background-color: var(--secondary);
 }
 
+/* Product Pages */
+
+#product-info {
+	backgorund-color: var(--secondary);
+}
 
 /* terms of service page */
 #terms-page {
