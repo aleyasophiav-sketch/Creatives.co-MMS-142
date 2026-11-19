@@ -32,6 +32,16 @@ body {
 	text-decoration: none;
 }
 
+/*keyboard focus indicator*/
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 3px;
+  box-shadow: none;
+}
 
 h1, h3 {
 	color: var(--text);
@@ -179,6 +189,7 @@ p {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
   border-radius: 8px;
+  border: 2px solid;
   padding: 5px 5px;
   min-width: 155px;
   margin-bottom: 0;
@@ -189,6 +200,7 @@ p {
   background-color: var(--background);
   color: var(--text);
   border-radius: 8px;
+  border: 2px solid;
   padding: 5px 5px;
 }
 
@@ -197,8 +209,21 @@ p {
   color:#707070
 }
 
-/*order button*/
+/* Autofill styling */
+#order-form input:-webkit-autofill,
+#order-form input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--background) inset;
+  -webkit-text-fill-color: var(--text);
+  transition: background-color 5000s ease-in-out 0s;
+}
 
+/*input invalid*/
+#order-form .form-control:user-invalid,
+#order-form .form-select:user-invalid {
+  border: 2px solid #cf0000;
+}
+
+/*order button*/
 #order-form button{
   background-color: var(--accent);
   color: var(--text);
