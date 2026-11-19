@@ -304,3 +304,158 @@ display: block;
 	font-family: "Overpass"; 
 	font-size: revert;
 }
+
+
+#contact-page {
+  font-family: "Overpass", sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}
+
+/* title band */
+#contact-page .contact-hero {
+  background-color: var(--secondary);
+  padding: 24px 0;
+}
+
+#contact-page .contact-hero h1 {
+  font-size: 2rem;
+}
+
+/* email and phone cards + form card */
+#contact-page .contact-card,
+#contact-page .contact-form-card {
+  background-color: var(--background);
+  color: var(--text);
+  border: 2px solid var(--primary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+#contact-page .contact-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#contact-page .contact-card img {
+  width: 40px;
+  height: 40px;
+  flex: none;
+}
+
+#contact-page .contact-card a {
+  color: var(--text);
+}
+
+#contact-page .contact-form-card {
+  padding: 24px 32px;
+}
+
+#contact-page .contact-form-card h2 {
+  font-family: "Sigmar One", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+/* labels beside fields (same idea as the order form) */
+#contact-page .input-group {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+#contact-page .form-label {
+  flex: 0 0 160px;
+  margin: 0;
+  padding-top: 6px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+#contact-page .required {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+#contact-page .form-control {
+  flex: 1 1 auto;
+  background-color: var(--background);
+  color: var(--text);
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  padding: 6px 10px;
+  font-size: 1rem;
+}
+
+#contact-page textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* placeholder: --text at 70% opacity (5.83:1 on --background) */
+#contact-page .form-control::placeholder {
+  color: var(--text);
+  opacity: 0.7;
+}
+
+/* keyboard focus: dark outline, because the yellow one is hard to see on cream */
+#contact-page input:focus-visible,
+#contact-page textarea:focus-visible,
+#contact-page button:focus-visible,
+#contact-page a:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+  box-shadow: none;
+}
+
+/* error messages (text + red border, not color alone) */
+#contact-page .field-error {
+  color: #B00020;
+  font-size: 1rem;
+  margin: 4px 0 0 176px;
+}
+
+#contact-page .field-error:empty {
+  display: none;
+}
+
+#contact-page .is-invalid-field {
+  border: 2px solid #B00020;
+}
+
+/* send button (same look as the order button) */
+#contact-page .btn-send {
+  background-color: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: 2px solid var(--primary);
+  border-radius: 8px;
+  min-height: 48px;
+  padding: 0 36px;
+  cursor: pointer;
+}
+
+/* phones: label above the field */
+@media (max-width: 576px) {
+  #contact-page .contact-form-card {
+    padding: 20px 16px;
+  }
+  #contact-page .input-group {
+    flex-direction: column;
+    gap: 4px;
+  }
+  #contact-page .form-label {
+    flex: none;
+    padding-top: 0;
+  }
+  #contact-page .form-control {
+    width: 100%;
+  }
+  #contact-page .field-error {
+    margin-left: 0;
+  }
+}
