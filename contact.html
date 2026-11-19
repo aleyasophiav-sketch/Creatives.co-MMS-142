@@ -1,1 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Comfort.co</title>
+
+    <!--Bootstrap,CSS,javascript-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/contactmailto.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&family=Sigmar+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+    <!--Navigation Bar-->
+    <nav id= "navigation" class="navbar md:navbar-expand">
+  <div class="container-fluid">
+    <a href="index.html" class="logo-link" aria-label="Go to home page">
+	<img src="images/logo.png" alt="Comfort.co" width="60" height="60" class= "ms-9 me-8">
+    </a>
+    <button class="btn-icon navbar-toggler" type="button"
+                data-bs-toggle="drawer" data-bs-target="#mainNav"
+                aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" aria-hidden="true"></span>
+      </button>
+
+      <dialog class="drawer drawer-end" tabindex="-1" id="mainNav" aria-labelledby="mainNavLabel">
+          <div class="drawer-header">
+            <h5 class="drawer-title" id="mainNavLabel">Menu</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+          </div>
+
+      <div class="navbar-nav">
+        <ul class="nav navbar-nav">
+         <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Home</a></li>
+         <li class="nav-item"><a class="nav-link active fw-bold" href="index.html#shirts">Shop</a></li>
+         <li class="nav-item"><a class="nav-link active fw-bold" href="contact.html">Contacts</a></li>
+        </ul>
+      </div>
+      </dialog>
+  </div>
+</nav>
+
+<main id="contact-page">
+
+    <!-- Title band -->
+    <section class="contact-hero text-center">
+        <div class="container">
+            <h1>Contact us</h1>
+            <p class="mb-0">Got a question about an order or a tee? Send us a message.</p>
+        </div>
+    </section>
+
+    <!-- Email and phone cards -->
+    <section class="container py-8">
+        <div class="row g-6 justify-content-center">
+            <div class="col-12 md:col-6 lg:col-5">
+                <div class="contact-card">
+                    <img src="images/mailicon.png" alt="Email icon" width="40" height="40">
+                    <div>
+                        <div>Email</div>
+                        <a class="fw-bold" href="mailto:hello@examplewebsite142.com">hello@examplewebsite142.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 md:col-6 lg:col-5">
+                <div class="contact-card">
+                    <img src="images/phoneicon.png" alt="Phone icon" width="40" height="40">
+                    <div>
+                        <div>Phone</div>
+                        <span class="fw-bold">+63 012 345 6789</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="container pb-12">
+        <div class="row justify-content-center">
+            <div class="col-12 md:col-10 lg:col-7">
+                <div class="contact-form-card">
+                    <h2>Send a message</h2>
+                    <p>Fields marked (required) must be filled in. Subject is optional.</p>
+
+                    <form id="contactForm" novalidate>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <label for="name" class="form-label">Name <span class="required">(required)</span></label>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Juan Dela Cruz" autocomplete="name" required aria-describedby="nameError">
+                            </div>
+                            <div class="field-error" id="nameError" role="alert"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <label for="email" class="form-label">Email <span class="required">(required)</span></label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="name@email.com" autocomplete="email" required aria-describedby="emailError">
+                            </div>
+                            <div class="field-error" id="emailError" role="alert"></div>
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="input-group">
+                                <label for="subject" class="form-label">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Question about sizing">
+                            </div>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="input-group">
+                                <label for="message" class="form-label">Message <span class="required">(required)</span></label>
+                                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Hi! Do you have the Everyday Comfort Tee in size L?" required aria-describedby="messageError"></textarea>
+                            </div>
+                            <div class="field-error" id="messageError" role="alert"></div>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit" class="btn-solid theme-primary btn-send fw-bold">Send Message &rarr;</button>
+                        </div>
+                        <p id="formStatus" class="text-center mt-3 mb-0" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer id="footer" class="py-3 mt-auto">
+   <div class="container">
+      <div class="row">
+         <div class="md:col-6 md:text-start text-center">
+             <p class="mt-5 mb-0">
+                 © 2026 Comfort.co. All rights reserved.
+             </p>
+         </div>
+       <div class="md:col-6 text-center md:text-end mt-5">
+             <ul class="list-inline">
+                 <li class="list-inline-item">
+                     <a href="terms.html" class="me-10">Terms of Service</a>
+                 </li>
+                 <li class="list-inline-item">
+                      <a href="privacy.html"> Privacy Policy</a>
+                 </li>
+              </ul>
+        </div>
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+
+</body>
+</html>
 
