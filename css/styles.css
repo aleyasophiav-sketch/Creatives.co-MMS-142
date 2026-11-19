@@ -49,10 +49,16 @@ p {
 	font-family: overpass;
 }
 
+#mainNav {
+  background-color: var(--primary);
+  color: var(--background);
+
+}
+
 #banner {
   background-image: 
     linear-gradient(#5B6AB299, #FCFDF9),
-    url(../images/header-bg.png);
+    url(images/header-bg.png);
     
   background-size: cover;
   background-position: top;
@@ -83,9 +89,90 @@ p {
 }
 
 /* Product Pages */
+#product-display .container{
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
-#product-info {
-	backgorund-color: var(--secondary);
+#product-image .card {
+  background-color: var(--background);
+  border-radius: 16px;
+}
+
+#product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+#product-info .card {
+	background-color: var(--secondary);
+  border-radius: 16px;
+}
+
+/*order form*/
+#order-form {
+  border-radius: 17px;
+  overflow: hidden;
+  border: 2px solid #1F2227;
+}
+
+#order-form .card-body{
+  background-color: #4D5EA3;
+  border-radius: 15px;
+  padding: 25px;
+}
+
+#order-form h3{
+  color: var(--background);
+  text-align: center;
+} 
+
+#order-form .input-group {
+  gap: 0.75rem;
+  align-items: center;
+  display: flex;
+}
+
+#order-form .form-label {
+  background-color: var(--background);
+  color: var(--text);
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 5px 5px;
+  min-width: 155px;
+  margin-bottom: 0;
+}
+
+#order-form .form-control,
+#order-form .form-select {
+  background-color: var(--background);
+  color: var(--text);
+  border-radius: 8px;
+  padding: 5px 5px;
+}
+
+#order-form .required {
+  font-size: 12px;
+  color:#707070
+}
+
+/*order button*/
+
+#order-form button{
+  background-color: var(--accent);
+  color: var(--text);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 15px;
+  width: auto;
+  display: block;
+  margin-left: auto;
+  cursor: pointer;
 }
 
 /* terms of service page */
