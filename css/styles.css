@@ -155,6 +155,7 @@ p {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  padding-top: 20px;
 }
 
 #product-image .product-img-wrapper > img {
@@ -167,7 +168,7 @@ display: block;
 
 .color-var-logo {
 position: absolute;
-bottom: 15px;
+bottom: 5px;
 left: 15px;
 z-index: 2;
 }
