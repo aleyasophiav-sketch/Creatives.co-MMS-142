@@ -261,7 +261,7 @@ display: block;
   font-family: "Overpass", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  margin-left: calc(155px + 00.75rem);
+  margin-left: calc(155px + 0.75rem);
   display: none;
 }
 
