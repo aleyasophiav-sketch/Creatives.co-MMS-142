@@ -2,6 +2,7 @@ const TO_ADDRESS = "orders@examplewebsite142.com";
 
 document.addEventListener("DOMContentLoaded", function () {
   const form = document.getElementById("order-details");
+  const status = document.getElementById("formStatus");
 
   const productInput = document.getElementById("product-name");
   const sizeInput = document.getElementById("size");
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
+    status.textContent = "";
 
     const product = productInput.value.trim();
     const size = sizeInput.value.trim();
@@ -85,6 +87,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (firstBadField) {
+      status.textContent = "Please fix the fields marked with an error and try again.";
       firstBadField.focus();
       return;
     }
