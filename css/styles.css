@@ -283,6 +283,14 @@ display: block;
   cursor: pointer;
 }
 
+#order-form .form-status {
+  color: var(--background);
+  font-family: "Overpass", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: right;
+}
+
 /* terms of service page */
 #terms-page {
     background-color: var(--secondary);
